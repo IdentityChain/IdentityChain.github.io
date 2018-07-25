@@ -98,23 +98,14 @@
 					<div class="col-md-6">
 						<div>
 
-								<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">模态框</button> -->
-								<!-- <div>宣传视频</div>
-								<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-								  <div class="modal-dialog modal-lg" role="document">
-									<div class="modal-content">
-											<video src="video/sp-xc-1.mp4" height="500" controls preload="metadata"></video>
-									</div>
-								  </div>
-								</div>
-								<div class="embed-responsive embed-responsive-16by9">
-										<iframe class="embed-responsive-item" src="video/sp-xc-1.mp4" allowfullscreen></iframe>
-								</div>
-								<div class="embed-responsive embed-responsive-16by9">
-										<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-								</div> -->
-								<video class="video-fluid z-depth-1" autoplay loop controls>
-										<source src="video/sp-xc-1.mp4" type="video/mp4" />
+								<video id="video1" width="580" height="370" controls="controls">
+
+								<source src="video/sp-xc-1.mp4" type="video/mp4"/>
+
+								<!-- <source src="material/sample.ogv" type="video/ogg"/> -->
+
+								你的浏览器不支持HTML5 video.
+
 								</video>
 
 						</div>
@@ -287,7 +278,37 @@
 		</div>
 	</div>
 </footer>
+<script>
 
+	var vid = document.getElementById("video1");
+	
+	function enableAutoplay() { 
+	
+		vid.autoplay = true;
+	
+		vid.load();
+	
+	}
+	
+	
+	
+	function disableAutoplay() { 
+	
+		vid.autoplay = false;
+	
+		vid.load();
+	
+	} 
+	
+	
+	
+	function checkAutoplay() { 
+	
+		alert(vid.autoplay);
+	
+	} 
+	
+	</script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
